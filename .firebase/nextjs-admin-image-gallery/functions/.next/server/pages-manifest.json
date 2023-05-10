@@ -1,0 +1,13 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/Delete": "pages/Delete.html",
+  "/Update": "pages/Update.html",
+  "/Upload": "pages/Upload.html",
+  "/api/hello": "pages/api/hello.js",
+  "/dashboard": "pages/dashboard.html",
+  "/": "pages/index.html",
+  "/login": "pages/login.html",
+  "/404": "pages/404.html"
+}

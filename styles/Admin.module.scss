@@ -1,0 +1,512 @@
+$LIGHT_TEXT_COLOR:rgb(64, 65, 76);
+
+.MENUcontainer {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 2% 0%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "UPLOAD"
+    "UPDATE"
+    "DELETE";
+  margin-top:-1%;
+
+  
+    
+}
+
+.buttonBorder{width:39vw; height:13vw;  border-radius: 25px; margin: auto; display: flex;
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 10px #b8b8b8,
+              inset -5px -5px 10px #ffffff;  opacity:0;
+            animation: MainButtonIntro ease-in 2s forwards;
+            animation-delay: 2.05s}
+
+
+@keyframes MainButtonIntro {
+
+  0% {opacity:0}
+
+  100%{opacity:1}
+  
+}
+
+
+.UPLOAD { grid-area: UPLOAD; width: auto; height: 25%;  display: flex; padding:1%; margin-left:29.5%; }
+.UPLOAD button {font-size: 10vw; width: 95%;margin:auto; cursor:pointer; border:none;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  5px 5px 15px #969696,
+               -5px -5px 15px #ffffff;justify-content: center; align-items: center; margin:auto; display:flex;
+                opacity:0;
+            animation: MainButtonIntro ease-in .5s forwards; animation-delay: 1s;
+            color:$LIGHT_TEXT_COLOR; 
+          }
+
+               .UPLOAD button:active {background: none;  box-shadow:none;}
+
+.UPDATE { grid-area: UPDATE; width: auto; height: 25%; display: flex; padding:1%; margin-left:29.5%;}
+.UPDATE button {font-size: 10vw; width: 95%; color:$LIGHT_TEXT_COLOR;   margin:auto; cursor:pointer; border:none;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  5px 5px 15px #969696,
+               -5px -5px 15px #ffffff;justify-content: center; align-items: center; margin:auto; display:flex;
+        opacity:0;
+            animation: MainButtonIntro ease-in .5s forwards; animation-delay: 1.25s; 
+          }
+
+               
+               .UPDATE button:active {background: none;  box-shadow:none;}
+
+.DELETE { grid-area: DELETE; width: auto; height: 25%;  display: flex; padding:1%;margin-left:29.5%;}
+.DELETE button {opacity: 0.45; font-size: 10vw; width: 95%; color:$LIGHT_TEXT_COLOR;  margin:auto; cursor:pointer; border:none;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  5px 5px 15px #969696,
+               -5px -5px 15px #ffffff;justify-content: center; align-items: center; margin:auto; display:flex;
+             opacity:0;
+            animation: MainButtonIntro ease-in .25s forwards; animation-delay: 1.5s; 
+          }
+
+               
+               .DELETE button:active {background: none;  box-shadow:none;}
+
+              
+
+.NAVcontainer {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .25fr;
+  gap: 2% 0%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "NAV_BAR";
+   
+    
+   
+}
+
+.NAV_BAR { grid-area: NAV_BAR; z-index: 1; }
+
+
+.NAV_BAR div {width:8vw; height:8vw; display: flex; background-color: rgb(255, 255, 255); border-radius: 100%; margin-left:1.5%; margin-top:1.5%;
+  background: linear-gradient(145deg, #FFFFFF, #d6d8db);
+  border-radius: 100%;
+  box-shadow: inset 5.11px 5.11px 8px #A5A7AA, inset -5.11px -5.11px 8px #FFFFFF; animation:NavButtonIntro 1s ease-in forwards; opacity:0; transform: scale(0)  }
+
+  .NAV_BAR div .LogoutIcon{width:8vw; height:8vw; ; transform:scale(.5); background:none }
+
+  .NAV_BAR div span {width:4vw; height:4vw; background: linear-gradient(145deg, #f0f0f0, #cacaca); border-radius: 100%;
+    background: #e7e7e7;
+    border-radius: 100%;
+    box-shadow: 3.9px 3.9px 5px #C4C6C9, -3.9px -3.9px 5px #eeeeee;  display: flex; margin:auto; margin-top:17%; cursor:pointer;} 
+
+    .NAV_BAR div span img{width:4vw; height:4vw; border-radius: 100%;
+
+      border-radius: 100%; transform:scale(.5);opacity: 0.45;
+    } 
+  
+
+    .NAV_BAR div span:active { border-radius: 198px;
+      background: #eeeded;
+      box-shadow: inset 5px 5px 10px #dddddd,
+                  inset -5px -5px 10px #ffffff; }
+
+
+.NAV_BAR div:nth-child(2) { width:6vw; height:6vw; display: inline-block; background-color: rgb(255, 255, 255); border-radius: 100%; margin-left:31%; margin-right:3.40%;  margin-bottom:2.25%}
+.NAV_BAR div:nth-child(n + 3) { width:6vw; height:6vw; display: inline-block; background-color: rgb(255, 255, 255); border-radius: 100%; margin-left:1%; margin-right:3.40%; margin-bottom:2.25%}
+
+
+.Wave_outset{ position:absolute; width:13vw; height:13vw;  border-radius: 100%; margin-left:5%; margin-top:1.5%; display: flex; 
+  background: #e0e0e0;
+  box-shadow:  5px 5px 10px #b8b8b8,
+               -5px -5px 10px #ffffff;animation:NavButtonIntro 1s ease-in forwards}
+
+.Wave_inset { width:11vw; height:11vw;  border-radius: 100%; margin: auto; display: flex;  justify-content: center; align-items: center;
+  border-radius: 100%;
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 10px #b8b8b8,
+              inset -5px -5px 10px #ffffff; animation:NavButtonIntro 1s ease-in forwards}
+  .Wave_outset div:nth-child(1) {margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  5px 5px 10px #b8b8b8,
+                 -5px -5px 10px #ffffff; animation:NavButtonIntro 1s ease-in forwards}
+  
+
+
+  @keyframes NavButtonIntro {
+
+    0%{opacity:0; transform: scale(0)}
+
+    100%{opacity:1; transform: scale(1)}
+    
+  }
+  .NAV_BAR div span:nth-child(1) {animation-delay: 0.25s; }
+  .NAV_BAR div:nth-child(1) {animation-delay: 0.75s; }
+  .NAV_BAR div:nth-child(2) {animation-delay: 1.0s; }
+  .NAV_BAR div:nth-child(3) {animation-delay: 1.25s; }
+  .NAV_BAR div:nth-child(4) {animation-delay: 1.5s; }
+  .NAV_BAR div:nth-child(5) {animation-delay: 1.75s; }
+  .NAV_BAR div:nth-child(6) {animation-delay: 2.0s; }
+
+  .UPLOADcontainer {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . ."
+      ". FormArea FormArea FormArea ."
+      ". FormArea FormArea FormArea ."
+      ". . . . .";
+      animation: INTRO-FADEIN  ease-in .25s forwards;
+  }
+  
+  .FormArea { grid-area: FormArea;  margin-top:-10vw;
+  }
+
+  .FormArea Input {
+
+    width:50%;
+    height:auto;
+    display: flex;
+    margin:auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 3vw;
+    margin-top:1vw;
+    background: #e0e0e0;
+    box-shadow: inset 2.5px 2.5px 4.5px #bcbcbc,
+                inset -2.5px -2.5px 4.5px #ffffff;
+    border: none;
+    color:$LIGHT_TEXT_COLOR; 
+
+  }
+
+  .FormArea Button {
+
+    width:auto;
+    height:auto;
+    display: flex;
+    margin:auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 4vw;
+    margin-top:0.5em;
+    border-radius: 27px;
+    background: #e0e0e0;
+    box-shadow:  6px 6px 6px #cacaca,
+                 -6px -6px 6px #f6f6f6;
+                 border:#797979;
+                 cursor:pointer;
+                 color:$LIGHT_TEXT_COLOR; 
+
+  }
+
+  .FormArea Button:active {
+
+    background: #e0e0e0;
+    box-shadow: inset 5px -5px 3px #d0d0d0,
+                inset -5px 5px 3px #d1d1d1;
+                color:#A5A7AA
+
+   }
+
+  .UPDATEcontainer {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2% 2%;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "UpdateImage UpdateInputs"
+      "UpdateInfo UpdateInputs";
+      margin-top:8%;
+      animation: INTRO-FADEIN  ease-in .25s forwards;
+  }
+  
+  .UpdateImage {
+    justify-self: center;
+    align-self: center;
+    grid-area: UpdateImage;
+    width: 100%;
+
+    display: flex
+  }
+
+  .UpdateImage img {
+    width:40%;
+    height:auto;
+    margin:auto;
+    transition: box-shadow 2s ease, transform 2s ease, filter .5s ease-out;
+    cursor:pointer;
+  }
+
+  .UpdateImage img:hover {
+   
+    background: #e0e0e0;
+    box-shadow:  6px 6px 12px #acacac,
+                 -6px -6px 12px #e0e0e0;
+             transform: scale(1.1)
+  }
+
+  .UpdateImage img:focus{
+
+    background: #e0e0e0;
+    box-shadow:  6px 6px 12px #acacac,
+                 -6px -6px 12px #e0e0e0;
+             filter:brightness(2) blur(25px);
+  }
+
+  .UpdateInfo {
+    justify-self: center;
+    align-self: center;
+    grid-area: UpdateInfo;
+    width: 50%;
+    display: flex;
+    background: #e0e0e0;
+    box-shadow:  7px 7px 10px #d9d9d9,
+                 -7px -7px 10px #e7e7e7;
+             margin-top:-10%;
+             color:$LIGHT_TEXT_COLOR; 
+   }
+
+  .UpdateInfo ul {font-size: 2.5vw;  color:$LIGHT_TEXT_COLOR; }
+  .UpdateInfo ul div {margin-bottom:.5vw; margin:10px;}
+
+  .UpdateInputs {
+    justify-self: stretch;
+    align-self: stretch;
+    grid-area: UpdateInputs;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  .UpdateInputs input {
+
+    margin:auto;
+    font-size: 2.5vw;
+    background: #e0e0e0;
+    box-shadow: inset 2.5px 2.5px 4.5px #bcbcbc,
+                inset -2.5px -2.5px 4.5px #ffffff;
+    border: none;
+    padding: 3%;
+    color:$LIGHT_TEXT_COLOR; 
+
+  }
+
+  .UpdateInputs button {
+
+    margin:auto;
+    font-size: 2.5vw;
+    border-radius: 27px;
+    background: #e0e0e0;
+    box-shadow:  6px 6px 6px #cacaca,
+                 -6px -6px 6px #f6f6f6;
+              cursor:pointer;
+    border:#797979;
+    color:$LIGHT_TEXT_COLOR; 
+    
+}
+
+.UpdateInputs button:active {
+
+  background: #e0e0e0;
+  box-shadow: inset 5px -5px 3px #d0d0d0,
+              inset -5px 5px 3px #d1d1d1;
+              color:#A5A7AA
+}
+
+.UpdateInputs button:nth-child(n + 1) {margin-top:3%; margin-bottom:3%;}
+
+.DELETEgrid{
+  margin: 2% auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2%;
+  margin-top:10%;
+  animation: INTRO-FADEIN  ease-in .25s forwards;
+}
+
+.IMGwrap{
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 0.8;
+}
+.IMGwrap img{
+ 
+width: 100%;
+height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor:pointer;
+}
+
+.IMGwrap img:active{
+filter:blur(100px) contrast(200%);
+transform:scale(2)
+}
+
+.ABOUTcontainer {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0% 0%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "ABOUT aboutUPDATE"
+    "ABOUT aboutUPDATE";
+    animation: INTRO-FADEIN  ease-in .25s forwards;
+}
+
+.ABOUT {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: ABOUT;
+  display:flex;
+  color:$LIGHT_TEXT_COLOR; 
+}
+
+.aboutUPDATE {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: aboutUPDATE;
+  display:flex;
+  flex-direction: column;
+}
+
+.ABOUT ul div {
+
+  margin:auto;
+  height:50%;
+  width:100%;
+  font-size: 4vw;
+  padding:2vw;
+}
+
+.aboutUPDATE textarea {
+
+  margin:auto;
+  width:90%;
+  height:80%;
+  font-size: 2vw;
+  margin-top:5%;
+  background: #e0e0e0;
+  box-shadow: inset 5px -5px 3px #d0d0d0,
+              inset -5px 5px 3px #d1d1d1;
+              color:#A5A7AA;
+              border:#A5A7AA;
+  
+}
+
+.aboutUPDATE button {
+
+  margin:auto;
+
+  font-size: 4vw;
+  margin-bottom:3.5%;
+  border-radius: 27px;
+  background: #e0e0e0;
+  box-shadow:  6px 6px 6px #cacaca,
+               -6px -6px 6px #f6f6f6;
+            cursor:pointer;
+  border:#797979;
+  color:$LIGHT_TEXT_COLOR; 
+  
+}
+
+.aboutUPDATE button:active {
+
+  background: #e0e0e0;
+  box-shadow: inset 5px -5px 3px #d0d0d0,
+              inset -5px 5px 3px #d1d1d1;
+              color:#A5A7AA
+}
+
+.LOGINcontainer {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr ;
+  grid-auto-columns: 1fr;
+  gap: 0% 0%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "EMAILinput"
+    "PASSWORDtitle"
+    "PASSWORDinput"
+    "SUBMITbutton";
+    margin-top:15vw;
+    animation: INTRO-FADEIN  ease-in .25s forwards;
+}
+
+.loginTitle { grid-area: loginTitle; display:flex; }
+
+.EMAILinput { grid-area: EMAILinput; display:flex;  }
+
+.PASSWORDtitle { grid-area: PASSWORDtitle; display:flex;  }
+
+.PASSWORDinput { grid-area: PASSWORDinput; display:flex;  }
+
+.SUBMITbutton { grid-area: SUBMITbutton; display:flex;  }
+
+
+.loginTitle label{margin:auto; margin-bottom:1vw;  font-size:2vw;  color:$LIGHT_TEXT_COLOR; }
+.EMAILinput input{margin:auto; font-size: 2.5vw; width:auto;text-align: center;  padding:.25em; margin-top:-1vw;
+  background: #e0e0e0;
+    box-shadow: inset 2.5px 2.5px 4.5px #bcbcbc,
+                inset -2.5px -2.5px 4.5px #ffffff;
+    border: none;  color:$LIGHT_TEXT_COLOR; }
+
+    .EMAILinput p {position: absolute; margin:auto; font-size: 2.5vw; width:auto;text-align: center; margin-top:0; margin-left:70vw;  color:$LIGHT_TEXT_COLOR; }
+.PASSWORDtitle label{margin:auto;  margin-bottom:1vw;  font-size:2vw;  color:$LIGHT_TEXT_COLOR; }
+.PASSWORDinput input{margin:auto; font-size: 2.5vw; width:auto;text-align: center;  padding:.25em; margin-top:-1vw;  color:$LIGHT_TEXT_COLOR; 
+  background: #e0e0e0;
+    box-shadow: inset 2.5px 2.5px 4.5px #bcbcbc,
+                inset -2.5px -2.5px 4.5px #ffffff;
+    border: none; }
+    .PASSWORDinput p {position: absolute; margin:auto; font-size: 2.5vw; width:auto;text-align: center; margin-top:0; margin-left:70vw;  color:$LIGHT_TEXT_COLOR; }
+
+.SUBMITbutton button {margin:auto; font-size: 5vw; text-align: center; cursor: pointer; margin-top: 1vw; padding:.25em;  color:$LIGHT_TEXT_COLOR; 
+  background: #e0e0e0;
+  box-shadow:  6px 6px 6px #cacaca,
+               -6px -6px 6px #f6f6f6;
+  border:#797979;
+  border-radius: 25px;}
+
+  .SUBMITbutton button:active {
+
+    background: #e0e0e0;
+    box-shadow: inset 5px -5px 3px #d0d0d0,
+                inset -5px 5px 3px #d1d1d1;
+                color:#A5A7AA
+  }
+
+  .SPINNERbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .SPINNERbox img {
+    width: 25vw;
+    height: 25vh;
+  }
+
+  @keyframes INTRO-FADEIN {
+
+    0%{opacity:0.1;
+    filter: blur(100px);
+}
+
+    100%{opacity: 1;
+    filter:blur(0);
+   }
+
+    
+  }
